@@ -6,7 +6,7 @@
   </header>
   <nav>
     <router-link to="/products" @addItemToCart="addItemToCart" :cart="cart">View Product</router-link> |
-    <router-link to="/cart" :cart="cart">View Cart</router-link>
+    <router-link to="/cart" :cart="cart">View Cart <span class="badge">{{cart.length}}</span></router-link>
   </nav>
   <router-view :cart="cart"></router-view>
   
@@ -64,6 +64,12 @@ header{
   color: #fff;
   border: none;
   text-decoration: none;
+}
+.badge{
+  background-color: #b72323;
+  color: #fff;
+  padding: 2px;
+  border-radius: 50px;
 }
 
 </style>
